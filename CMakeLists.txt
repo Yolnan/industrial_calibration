@@ -109,11 +109,16 @@ endif()
 # Calibration examples
 add_subdirectory(examples)
 
+# Industrial Calibration Widget
+# set(SUPPORTED_COMPONENTS widget)
+add_subdirectory(widget)
+
 # Package configuration
 configure_package(
   NAMESPACE industrial_calibration
   TARGETS ${PROJECT_NAME}
           ${PROJECT_NAME}_plugins
+          COMPONENT gui
           DEPENDENCIES
           boost_plugin_loader
           Eigen3
